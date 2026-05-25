@@ -8,12 +8,28 @@
     <link rel="stylesheet" href="trangtri.css">
 </head>
 <body>
+    <div class="header-container">
+        <a href="https://slink.ptit.edu.vn/dashboard"><img src="logoptit.png"
+            alt="PTIT Logo"
+            class="logo"
+            width="50"
+            height="50"
+            title ="S-link"
+            
+        >
+        </a>
+       
+        <span class="site-title">Học viện Công nghệ Bưu chính Viễn thông</span>
+    </div>
+  
+    
+       
 
     <!-- NAVBAR -->
     <nav>
 
-        <h2>PTIT Subject Rating</h2>
-
+        <h2>PTIT Subject Rating</h2> <br>
+        
         <button id="darkModeBtn">
             🌙 Dark Mode
         </button>
@@ -38,11 +54,39 @@
 
         <form id="subjectForm">
 
-            <input
-                type="text"
-                id="subjectName"
-                placeholder="Tên môn học"
-            >
+            <select id="subjectName">
+                <option value="">
+                    -- Chọn môn học --
+                </option>
+
+                <option value="Lập trình với ngôn ngữ script">
+                    Lập trình với ngôn ngữ script
+                </option>
+
+                <option value="Tiếng anh Course 1">
+                    Tiếng anh Course 1
+                </option>
+
+                <option value="Giải tích 2">
+                    Giải tích 2
+                </option>
+
+                <option value="Cơ sở dữ liệu">
+                    Cơ sở dữ liệu
+                </option>
+
+                <option value="Giáo dục thể chất 2">
+                    Giáo dục thể chất 2
+                </option>
+
+                <option value="Xác suất thống kê">
+                    Xác suất thống kê
+                </option>
+
+
+
+                
+            </select>
 
             <select id="department">
 
@@ -158,6 +202,10 @@
             </option>
 
         </select>
+        <a href="https://docs.google.com/spreadsheets/d/1NJ2bw_mYiWeiCtmd7y-fg5586NFFw4ahoJLF6W1w1l8/edit?usp=drivesdk&usp=embed_facebook">
+            <button id="documentBtn">Tài liệu</button>
+        </a>
+      
 
     </section>
 
