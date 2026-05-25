@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PTIT Subject Rating</title>
+
+    <link rel="stylesheet" href="trangtri.css">
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <nav>
+
+        <h2>PTIT Subject Rating</h2>
+
+        <button id="darkModeBtn">
+            🌙 Dark Mode
+        </button>
+
+    </nav>
+
+    <!-- HEADER -->
+    <header>
+
+        <h1>Hệ thống đánh giá môn học PTIT</h1>
+
+        <p>
+            Review độ khó môn học dành cho sinh viên
+        </p>
+
+    </header>
+
+    <!-- FORM -->
+    <section class="form-section">
+
+        <h2>Thêm đánh giá môn học</h2>
+
+        <form id="subjectForm">
+
+            <input
+                type="text"
+                id="subjectName"
+                placeholder="Tên môn học"
+            >
+
+            <select id="department">
+
+                <option value="">
+                    -- Chọn khoa --
+                </option>
+
+                <option value="CNTT">
+                    CNTT
+                </option>
+
+                <option value="ATTT">
+                    ATTT
+                </option>
+
+                <option value="Marketing">
+                    Marketing
+                </option>
+
+            </select>
+
+            <label>
+                Độ khó:
+                <span id="difficultyValue">5</span>
+            </label>
+
+            <input
+                type="range"
+                id="difficulty"
+                min="1"
+                max="10"
+                value="5"
+            >
+
+            <select id="assignments">
+
+                <option value="Ít">
+                    Ít bài tập
+                </option>
+
+                <option value="Trung bình">
+                    Trung bình
+                </option>
+
+                <option value="Nhiều">
+                    Nhiều bài tập
+                </option>
+
+            </select>
+
+            <select id="passLevel">
+
+                <option value="Dễ">
+                    Dễ qua môn
+                </option>
+
+                <option value="Trung bình">
+                    Trung bình
+                </option>
+
+                <option value="Khó">
+                    Khó qua môn
+                </option>
+
+            </select>
+
+            <input
+                type="text"
+                id="prerequisite"
+                placeholder="Môn cần học trước"
+            >
+
+            <textarea
+                id="review"
+                placeholder="Nhập review..."
+            ></textarea>
+
+            <button type="submit">
+                Thêm đánh giá
+            </button>
+
+        </form>
+
+        <p id="error"></p>
+
+    </section>
+
+    <!-- SEARCH -->
+    <section class="search-section">
+
+        <input
+            type="text"
+            id="searchInput"
+            placeholder="Tìm môn học..."
+        >
+
+        <select id="filterDifficulty">
+
+            <option value="all">
+                Tất cả độ khó
+            </option>
+
+            <option value="easy">
+                Dễ (1-4)
+            </option>
+
+            <option value="medium">
+                Trung bình (5-7)
+            </option>
+
+            <option value="hard">
+                Khó (8-10)
+            </option>
+
+        </select>
+
+    </section>
+
+    <!-- TOP SUBJECT -->
+    <section class="top-section">
+
+        <h2>🔥 Top môn khó nhất</h2>
+
+        <div id="topSubjects"></div>
+
+    </section>
+
+    <!-- SUBJECT LIST -->
+    <section>
+
+        <h2>Danh sách đánh giá</h2>
+
+        <div id="subjectList"></div>
+
+    </section>
+
+    <script type="module" src="hoatdong.js"></script>
+
+</body>
+</html>
