@@ -1,0 +1,164 @@
+/* Đặt lại lề và font chữ cơ bản */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-image: url('https://images.unsplash.com/photo-1541450805268-4822a3a774ca?q=80&w=1920&auto=format&fit=crop');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Tạo các khối tròn màu sắc mờ ảo phía sau form */
+.shape {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(70px);
+    z-index: 1;
+}
+
+.shape.blue {
+    width: 350px;
+    height: 350px;
+    background: #0066ff;
+    top: 5%;
+    left: 20%;
+}
+
+.shape.orange {
+    width: 300px;
+    height: 300px;
+    background: #ff6600;
+    bottom: -5%;
+    right: 25%;
+}
+
+/* Hiệu ứng Kính mờ (Glassmorphism) cho Form */
+.glass-panel {
+    width: 420px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+    padding: 40px 40px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    z-index: 2;
+    color: white;
+}
+
+.glass-panel h2 {
+    text-align: center;
+    margin-bottom: 35px;
+    font-size: 26px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+/* Định dạng các ô nhập liệu */
+.input-group {
+    margin-bottom: 25px;
+}
+
+.input-group label {
+    display: block;
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 14px 15px;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    color: white;
+    font-size: 14px;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.input-group input::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.input-group input:focus {
+    background: rgba(255, 255, 255, 0.15);
+    border-color: rgba(255, 255, 255, 0.5);
+}
+
+/* Nút Tạo tài khoản */
+.btn-primary {
+    width: 100%;
+    padding: 14px;
+    background: white;
+    color: #111;
+    border: none;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+    margin-top: 5px;
+    transition: 0.3s ease;
+}
+
+.btn-primary:hover {
+    background: #e6e6e6;
+}
+
+/* Cụm nút Mạng xã hội */
+.social-buttons {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.btn-social {
+    flex: 1;
+    padding: 12px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    color: white;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
+
+.btn-social:hover {
+    background: rgba(255, 255, 255, 0.15);
+}
+
+/* Phần chữ dưới cùng */
+.footer-text {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.footer-text a {
+    color: #ff8c42;
+    text-decoration: underline;
+    font-weight: 600;
+    margin-left: 5px;
+}
+
+.footer-text a:hover {
+    color: #ff9e5e;
+}
