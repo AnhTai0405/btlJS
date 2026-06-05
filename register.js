@@ -1,34 +1,36 @@
-import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.2/firebase-app.js";
-import { getAuth, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.7.2/firebase-auth.js";
+import { initializeApp } from "https://www.gstatic.com/firebasejs/12.13.0/firebase-app.js";
+import { getAuth, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/12.13.0/firebase-auth.js";
 
+// Thay thế đoạn này vào TRONG CẢ 2 FILE login.js và register.js
 const firebaseConfig = {
-    apiKey: "AIzaSyApGckJlfyPwUWBLqpvgM5hAhEZ4k4qAZc",
-    authDomain: "login-b3d7f.firebaseapp.com",
-    projectId: "login-b3d7f",
-    storageBucket: "login-b3d7f.firebasestorage.app",
-    messagingSenderId: "265538131068",
-    appId: "1:265538131068:web:6d401a92d43d426a9325f9",
-    measurementId: "G-W5C10LWZWP"
+  apiKey: "AIzaSyDj5RyLOA2KA7JPDP8A3ghqOXXQkQNFJuQ",
+  authDomain: "btl-js.firebaseapp.com",
+  databaseURL: "https://btl-js-default-rtdb.firebaseio.com",
+  projectId: "btl-js",
+  storageBucket: "btl-js.firebasestorage.app",
+  messagingSenderId: "1012222740",
+  appId: "1:1012222740:web:f1a91794b367c869cc5001",
+  measurementId: "G-WV5MVLYEZ6"
 };
-
-
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
-
 
 document.getElementById('btn-register').addEventListener("click", function (event) {
     event.preventDefault();
     const email = document.getElementById("reg-email").value;
     const password = document.getElementById("reg-password").value;
 
+    if (!email || !password) {
+        alert("Vui lòng điền đầy đủ thông tin đăng ký!");
+        return;
+    }
+
     createUserWithEmailAndPassword(auth, email, password)
         .then((userCredential) => {
-            alert("Đăng ký thành công!");
-            window.location.href = "login.html";
+            alert("Đăng ký tài khoản thành công!");
+            window.location.href = "login.html"; // Đăng ký xong quay lại giao diện đăng nhập
         })
         .catch((error) => {
-            alert("Đăng ký thất bại: " + error.message);
+            alert("Lỗi đăng ký: " + error.message);
         });
 });
-
-
