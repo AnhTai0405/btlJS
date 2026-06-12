@@ -1,106 +1,132 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="vi">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PTIT Subject Rating</title>
-    <link rel ="icon" type="image/x-icon" href="picture/favicon.ico">
-    <link rel="stylesheet" href="trangtri.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PTIT Subject Rating</title>
+  <link rel="icon" type="image/x-icon" href="picture/favicon.ico">
+  <link rel="stylesheet" href="trangtri.css">
 </head>
 <body>
-    <div class="header-container">
-        <a href="https://slink.ptit.edu.vn/dashboard"><img src="picture/logoptit.png"
-            alt="PTIT Logo"
-            class="logo"
-            width="50"
-            height="50"
-            title ="S-link"
-        >
-        </a>
-       
-        <span class="site-title">Học viện Công nghệ Bưu chính Viễn thông</span>
+  <div class="header-container">
+    <a href="https://slink.ptit.edu.vn/dashboard">
+      <img src="picture/logoptit.png" alt="PTIT Logo" width="50" height="50" title="S-link">
+    </a>
+    <span class="site-title">Học viện Công nghệ Bưu chính Viễn thông</span>
+  </div>
+
+  <nav>
+    <div class="nav-left">
+      <button id="toggleSidebarBtn" class="sidebar-toggle">☰</button>
+      <h2>PTIT Subject Rating</h2>
     </div>
-  
-    <nav style="display: flex; justify-content: space-between; align-items: center; padding: 15px 20px;">
-        <h2>PTIT Subject Rating</h2>
-        <div>
-            <button id="darkModeBtn">🌙 Dark Mode</button>
-            <button id="logoutBtn" style="background-color: #333; color: white; border: none; padding: 10px 15px; cursor: pointer; border-radius: 8px; margin-left: 10px; font-weight: bold;">
-                🚪 Đăng xuất
-            </button>
-        </div>
-    </nav>
+    <div class="nav-buttons">
+      <button id="darkModeBtn">🌙 Chế độ tối</button>
+      <button id="logoutBtn" style="display: none;">🚪 Đăng xuất</button>
+    </div>
+  </nav>
 
-    <header>
-        <h1>Hệ thống đánh giá môn học PTIT</h1>
-        <p>Review độ khó môn học dành cho sinh viên</p>
-    </header>
+  <header>
+    <h1>Hệ thống đánh giá môn học PTIT</h1>
+    <p>Review độ khó & Trao đổi học tập dành cho sinh viên</p>
+  </header>
 
-    <section class="form-section">
-        <h2>Thêm đánh giá môn học</h2>
-        <form id="subjectForm">
-            <select id="subjectName">
-                <option value="">-- Chọn môn học --</option>
-                <option value="Lập trình với ngôn ngữ script">Lập trình với ngôn ngữ script</option>
-                <option value="Tiếng anh Course 1">Tiếng anh Course 1</option>
-                <option value="Giải tích 2">Giải tích 2</option>
-                <option value="Cơ sở dữ liệu">Cơ sở dữ liệu</option>
-                <option value="Giáo dục thể chất 2">Giáo dục thể chất 2</option>
-                <option value="Xác suất thống kê">Xác suất thống kê</option>
+  <div class="app-wrapper">
+    <aside class="sidebar">
+      <ul>
+        <li id="tab-rating" class="active">⭐ Đánh giá môn học</li>
+        <li id="tab-exchange">💬 Trao đổi học tập</li>
+      </ul>
+    </aside>
+
+    <div class="main-content">
+      <div id="section-rating">
+        <section class="form-section">
+          <h2>Thêm đánh giá môn học</h2>
+          <form id="subjectForm">
+            <select id="subjectName" required>
+              <option value="">-- Chọn môn học --</option>
+              <option value="Lập trình với ngôn ngữ script">Lập trình với ngôn ngữ script</option>
+              <option value="Tiếng anh Course 1">Tiếng anh Course 1</option>
+              <option value="Giải tích 2">Giải tích 2</option>
+              <option value="Cơ sở dữ liệu">Cơ sở dữ liệu</option>
+              <option value="Giáo dục thể chất 2">Giáo dục thể chất 2</option>
+              <option value="Xác suất thống kê">Xác suất thống kê</option>
             </select>
-
-            <select id="department">
-                <option value="">-- Chọn khoa --</option>
-                <option value="CNTT">CNTT</option>
-                <option value="ATTT">ATTT</option>
-                <option value="Marketing">Marketing</option>
+            <select id="department" required>
+              <option value="">-- Chọn khoa --</option>
+              <option value="CNTT">CNTT</option>
+              <option value="ATTT">ATTT</option>
+              <option value="Marketing">Marketing</option>
             </select>
-
-            <label>Độ khó: <span id="difficultyValue">5</span></label>
+            <label>
+              <b>Độ khó:</b>
+              <span id="difficultyValue" class="difficulty-value">5</span>/10
+            </label>
             <input type="range" id="difficulty" min="1" max="10" value="5">
-
             <select id="assignments">
-                <option value="Ít">Ít bài tập</option>
-                <option value="Trung bình">Trung bình</option>
-                <option value="Nhiều">Nhiều bài tập</option>
+              <option value="Ít">Ít bài tập</option>
+              <option value="Trung bình">Trung bình</option>
+              <option value="Nhiều">Nhiều bài tập</option>
             </select>
-
             <select id="passLevel">
-                <option value="Dễ">Dễ qua môn</option>
-                <option value="Trung bình">Trung bình</option>
-                <option value="Khó">Khó qua môn</option>
+              <option value="Dễ">Dễ qua môn</option>
+              <option value="Trung bình">Trung bình</option>
+              <option value="Khó">Khó qua môn</option>
             </select>
-
             <input type="text" id="prerequisite" placeholder="Môn cần học trước">
-            <textarea id="review" placeholder="Nhập review..."></textarea>
-            <button type="submit">Thêm đánh giá</button>
-        </form>
-        <p id="error"></p>
-    </section>
+            <textarea id="review" placeholder="Nhập review của bạn về môn học này..." rows="4" required></textarea>
+            <button type="submit" class="full-width-btn">Thêm đánh giá</button>
+          </form>
+          <p id="error" class="error-message"></p>
+        </section>
 
-    <section class="search-section">
-        <input type="text" id="searchInput" placeholder="Tìm môn học...">
-        <select id="filterDifficulty">
+        <section class="search-section">
+          <input type="text" id="searchInput" placeholder="🔍 Tìm môn học...">
+          <select id="filterDifficulty">
             <option value="all">Tất cả độ khó</option>
             <option value="easy">Dễ (1-4)</option>
             <option value="medium">Trung bình (5-7)</option>
             <option value="hard">Khó (8-10)</option>
-        </select>
-        <a href="https://docs.google.com/spreadsheets/d/1NJ2bw_mYiWeiCtmd7y-fg5586NFFw4ahoJLF6W1w1l8/edit?usp=drivesdk&usp=embed_facebook">
-            <button id="documentBtn">Tài liệu</button>
-        </a>
-    </section>
+          </select>
+          <a href="https://docs.google.com/spreadsheets/d/1NJ2bw_mYiWeiCtmd7y-fg5586NFFw4ahoJLF6W1w1l8/edit?usp=drivesdk&usp=embed_facebook" target="_blank" class="reference-link">
+            <button id="documentBtn" class="full-width-btn">📂 Tài liệu tham khảo</button>
+          </a>
+        </section>
 
-    <section class="top-section">
-        <h2>🔥 Top môn khó nhất</h2>
-        <div id="topSubjects"></div>
-    </section>
+        <section class="top-section">
+          <h2>🔥 Top môn khó nhất</h2>
+          <div id="topSubjects"></div>
+        </section>
 
-    <section>
-        <h2>Danh sách đánh giá</h2>
-        <div id="subjectList"></div>
-    </section>
+        <section class="list-section">
+          <h2>📚 Danh sách đánh giá</h2>
+          <div id="subjectList"></div>
+        </section>
+      </div>
 
-    <script type="module" src="hoatdong.js"></script>
+      <div id="section-exchange" class="hidden-section">
+        <section class="form-section">
+          <h2>Đăng bài trao đổi / Câu hỏi</h2>
+          <form id="exchangeForm">
+            <textarea id="exchangeContent" placeholder="Bạn đang thắc mắc môn gì, code lỗi ra sao, nhập vào đây nhé..." rows="4" required></textarea>
+            <div class="file-upload-row">
+              <label for="exchangeFile" class="file-upload-label">📎 Đính kèm Ảnh / File</label>
+              <input type="file" id="exchangeFile" accept="image/*, .pdf, .doc, .docx, .zip" multiple>
+              <span id="file-chosen-text" class="file-chosen-text">Chưa chọn file nào</span>
+            </div>
+            <button id="postExchangeBtn" type="submit" class="full-width-btn">Đăng bài</button>
+          </form>
+        </section>
+
+        <section class="exchange-section">
+          <h2>💬 Bảng tin trao đổi</h2>
+          <div id="exchangeList"></div>
+        </section>
+      </div>
+    </div>
+  </div>
+
+  <script type="module" src="hoatdong.js"></script>
 </body>
 </html>
