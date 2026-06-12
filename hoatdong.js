@@ -12,7 +12,6 @@ import {
 import { getAuth, onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/12.13.0/firebase-auth.js";
 import { getStorage, ref, uploadBytes, getDownloadURL } from "https://www.gstatic.com/firebasejs/12.13.0/firebase-storage.js";
 
-// Đã cập nhật lại API Key và thêm databaseURL cho đồng nhất với login.js
 const firebaseConfig = {
     apiKey: "AIzaSyDj5RyLOA2KA7JPDP8A3ghqOXXQkQNFJuQ",
     authDomain: "btl-js.firebaseapp.com",
@@ -29,7 +28,6 @@ const db = getFirestore(app);
 const auth = getAuth(app);
 const storage = getStorage(app);
 
-// ... (Giữ nguyên toàn bộ code phía dưới của bạn) ...
 window.subjects = [];
 
 const subjectForm = document.getElementById("subjectForm");
