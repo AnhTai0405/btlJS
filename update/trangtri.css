@@ -1,296 +1,287 @@
-/* --- BIẾN MÀU SẮC --- */
-:root {
-    --primary-red: #d32f2f;
-    --hover-red: #b71c1c;
-    --bg-white: #ffffff;
-    --bg-light: #f5f7fa;
-    --text-main: #333333;
-    --border-color: #e0e0e0;
-    --shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+﻿:root {
+  --primary-red: #d32f2f;
+  --hover-red: #b71c1c;
+  --bg-white: #ffffff;
+  --bg-light: #f5f7fa;
+  --text-main: #333333;
+  --border-color: #e0e0e0;
+  --shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* --- CHẾ ĐỘ DARK MODE --- */
 body.dark {
-    --bg-white: #1e1e1e;
-    --bg-light: #121212;
-    --text-main: #f5f5f5;
-    --border-color: #333333;
-    --shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  --bg-white: #1e1e1e;
+  --bg-light: #121212;
+  --text-main: #f5f5f5;
+  --border-color: #333333;
+  --shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
 }
 
-/* --- CƠ BẢN --- */
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: var(--bg-light);
-    color: var(--text-main);
-    line-height: 1.6;
-    transition: all 0.3s ease;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--bg-light);
+  color: var(--text-main);
+  line-height: 1.6;
+  transition: all 0.3s ease;
 }
 
-/* --- HEADER & NAV --- */
 .header-container {
-    background-color: var(--bg-white);
-    padding: 10px 20px;
-    display: flex;
-    align-items: center;
-    box-shadow: var(--shadow);
+  background-color: var(--bg-white);
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  box-shadow: var(--shadow);
 }
 
 .site-title {
-    font-size: 18px;
-    font-weight: bold;
-    color: var(--primary-red);
-    margin-left: 15px;
+  font-size: 18px;
+  font-weight: bold;
+  color: var(--primary-red);
+  margin-left: 15px;
 }
 
 nav {
-    background-color: var(--primary-red);
-    color: white;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 5%;
-    box-shadow: var(--shadow);
+  background-color: var(--primary-red);
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 5%;
+  box-shadow: var(--shadow);
 }
 
 nav h2 {
-    margin: 0;
+  margin: 0;
 }
 
 header {
-    text-align: center;
-    padding: 40px 20px;
-    background: linear-gradient(135deg, var(--primary-red) 0%, #ff6659 100%);
-    color: white;
-    margin-bottom: 30px;
+  text-align: center;
+  padding: 40px 20px;
+  background: linear-gradient(135deg, var(--primary-red) 0%, #ff6659 100%%);
+  color: white;
+  margin-bottom: 30px;
 }
 
-/* --- NÚT BẤM (BUTTONS) --- */
 button {
-    background-color: var(--primary-red);
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 6px;
-    cursor: pointer;
-    font-weight: bold;
-    transition: background 0.3s;
+  background-color: var(--primary-red);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s;
 }
 
 button:hover {
-    background-color: var(--hover-red);
+  background-color: var(--hover-red);
 }
 
 #darkModeBtn {
-    background-color: #fff;
-    color: var(--primary-red);
+  background-color: #fff;
+  color: var(--primary-red);
 }
 
 #logoutBtn {
-    background-color: #333;
-    color: #fff;
+  background-color: #333;
+  color: #fff;
 }
 
-/* --- FORM & INPUT --- */
 section {
-    max-width: 800px;
-    margin: 0 auto 30px auto;
-    padding: 25px;
-    background: var(--bg-white);
-    border-radius: 12px;
-    box-shadow: var(--shadow);
+  max-width: 800px;
+  margin: 0 auto 30px auto;
+  padding: 25px;
+  background: var(--bg-white);
+  border-radius: 12px;
+  box-shadow: var(--shadow);
 }
 
 h2 {
-    color: var(--primary-red);
-    margin-bottom: 20px;
-    border-bottom: 2px solid var(--primary-red);
-    padding-bottom: 10px;
-    display: inline-block;
+  color: var(--primary-red);
+  margin-bottom: 20px;
+  border-bottom: 2px solid var(--primary-red);
+  padding-bottom: 10px;
+  display: inline-block;
 }
 
 body.dark h2 {
-    color: #ff6659;
-    border-bottom-color: #ff6659;
+  color: #ff6659;
+  border-bottom-color: #ff6659;
 }
 
-input, select, textarea {
-    width: 100%;
-    padding: 12px;
-    margin: 10px 0;
-    border: 1px solid var(--border-color);
-    border-radius: 6px;
-    background-color: var(--bg-light);
-    color: var(--text-main);
-    font-family: inherit;
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  background-color: var(--bg-light);
+  color: var(--text-main);
+  font-family: inherit;
 }
 
-input:focus, select:focus, textarea:focus {
-    outline: none;
-    border-color: var(--primary-red);
-    box-shadow: 0 0 5px rgba(211, 47, 47, 0.3);
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  border-color: var(--primary-red);
+  box-shadow: 0 0 5px rgba(211, 47, 47, 0.3);
 }
 
-/* --- DANH SÁCH & CARD --- */
-.card, .top-card {
-    background: var(--bg-light);
-    border: 1px solid var(--border-color);
-    border-left: 5px solid var(--primary-red);
-    padding: 15px;
-    margin-bottom: 15px;
-    border-radius: 8px;
-    box-shadow: var(--shadow);
+.card,
+.top-card {
+  background: var(--bg-light);
+  border: 1px solid var(--border-color);
+  border-left: 5px solid var(--primary-red);
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  box-shadow: var(--shadow);
 }
 
-.card h3, .top-card h3 {
-    color: var(--primary-red);
-    margin-bottom: 10px;
+.card h3,
+.top-card h3 {
+  color: var(--primary-red);
+  margin-bottom: 10px;
 }
 
 body.dark .card h3 {
-    color: #ff6659;
+  color: #ff6659;
 }
 
 .deleteBtn {
-    background-color: #555;
-    margin-top: 10px;
+  background-color: #555;
+  margin-top: 10px;
 }
 
 .deleteBtn:hover {
-    background-color: #ff3333;
+  background-color: #ff3333;
 }
 
-/* Phân loại mức độ khó */
-.card.easy { border-left-color: #4caf50; }
-.card.medium { border-left-color: #ff9800; }
-.card.hard { border-left-color: #f44336; }
+.card.easy {
+  border-left-color: #4caf50;
+}
 
-/* --- TÌM KIẾM --- */
+.card.medium {
+  border-left-color: #ff9800;
+}
+
+.card.hard {
+  border-left-color: #f44336;
+}
+
 .search-section {
-    display: flex;
-    gap: 15px;
-    flex-wrap: wrap;
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
 }
 
-.search-section input, .search-section select {
-    flex: 1;
-    min-width: 200px;
-    margin: 0;
+.search-section input,
+.search-section select {
+  flex: 1;
+  min-width: 200px;
+  margin: 0;
 }
 
-/* --- BỐ CỤC CHÍNH CÓ SIDEBAR --- */
 .app-wrapper {
-    display: flex;
-    max-width: 1200px;
-    margin: 0 auto;
-    align-items: flex-start;
-    gap: 20px;
-    padding: 0 20px;
+  display: flex;
+  max-width: 1200px;
+  margin: 0 auto;
+  align-items: flex-start;
+  gap: 20px;
+  padding: 0 20px;
+  transition: all 0.3s ease-in-out;
 }
 
-/* --- THANH BÊN (SIDEBAR) --- */
 .sidebar {
-    width: 250px;
-    background: var(--bg-white);
-    border-radius: 12px;
-    box-shadow: var(--shadow);
-    padding: 10px 0;
-    position: sticky;
-    top: 20px;
-    /* Thêm 2 dòng dưới đây để tạo hiệu ứng thu gọn mượt mà */
-    transition: all 0.3s ease-in-out; 
-    overflow: hidden; 
+  width: 250px;
+  background: var(--bg-white);
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+  padding: 10px 0;
+  position: sticky;
+  top: 20px;
+  transition: all 0.3s ease-in-out;
+  overflow: hidden;
 }
 
-/* Lớp dùng để ẩn thanh bên (sẽ được JS gọi) */
 .sidebar.collapsed {
-    width: 0;
-    padding: 0;
-    opacity: 0;
+  width: 0;
+  padding: 0;
+  opacity: 0;
 }
 
 .sidebar ul {
-    list-style: none;
-    /* Thêm flexbox để căn giữa */
-    display: flex;
-    flex-direction: column;
-    align-items: center; 
-    padding: 0;
-    margin: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0;
+  margin: 0;
 }
 
 .sidebar li {
-    width: 100%; /* Chiếm toàn bộ chiều rộng thanh bên */
-    text-align: center; /* Căn chữ vào giữa */
-    padding: 15px 0; /* Bỏ padding hai bên để chữ thực sự nằm giữa */
-    cursor: pointer;
-    font-weight: bold;
-    color: var(--text-main);
-    border-left: 4px solid transparent;
-    transition: all 0.3s ease;
+  width: 100%;
+  text-align: center;
+  padding: 15px 0;
+  cursor: pointer;
+  font-weight: bold;
+  color: var(--text-main);
+  border-left: 4px solid transparent;
+  transition: all 0.3s ease;
 }
 
 .sidebar li:hover {
-    background-color: var(--bg-light);
+  background-color: var(--bg-light);
 }
 
 .sidebar li.active {
-    border-left-color: var(--primary-red);
-    color: var(--primary-red);
-    background-color: rgba(211, 47, 47, 0.05);
-}
-
-/* --- Đảm bảo vùng chứa co giãn khi ẩn sidebar --- */
-.app-wrapper {
-    display: flex;
-    max-width: 1200px;
-    margin: 0 auto;
-    align-items: flex-start;
-    gap: 20px;
-    padding: 0 20px;
-    transition: all 0.3s ease-in-out;
+  border-left-color: var(--primary-red);
+  color: var(--primary-red);
+  background-color: rgba(211, 47, 47, 0.05);
 }
 
 .main-content {
-    flex: 1;
-    width: 100%;
-    transition: all 0.3s ease-in-out;
+  flex: 1;
+  width: 100%;
+  transition: all 0.3s ease-in-out;
 }
 
-/* Styling cho link tải tài liệu */
 .doc-link {
-    display: inline-block;
-    background-color: #f0f2f5;
-    padding: 10px 15px;
-    border-radius: 8px;
-    text-decoration: none;
-    color: var(--text-main);
-    font-weight: bold;
-    margin-top: 10px;
-    border: 1px solid var(--border-color);
+  display: inline-block;
+  background-color: #f0f2f5;
+  padding: 10px 15px;
+  border-radius: 8px;
+  text-decoration: none;
+  color: var(--text-main);
+  font-weight: bold;
+  margin-top: 10px;
+  border: 1px solid var(--border-color);
 }
+
 .doc-link:hover {
-    background-color: #e4e6eb;
+  background-color: #e4e6eb;
 }
 
 body.dark .doc-link {
-    background-color: #333;
-    color: #fff;
-    border-color: #555;
-}
-body.dark .doc-link:hover {
-    background-color: #444;
+  background-color: #333;
+  color: #fff;
+  border-color: #555;
 }
 
-/* Container chứa ảnh và tài liệu bài đăng */
+body.dark .doc-link:hover {
+  background-color: #444;
+}
+
 .post-media {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
